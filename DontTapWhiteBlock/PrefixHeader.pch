@@ -1,0 +1,42 @@
+//
+//  PrefixHeader.pch
+//  RACDemo
+//
+//  Created by jiachen on 16/3/7.
+//  Copyright © 2016年 jiachen. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define WeakSelf __weak typeof(self) weakSelf = self
+
+#import "ReactiveCocoa.h"
+
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+
+#define WhiteBlockHeight 168  
+
+#import "TipView.h"
+#import "SoundResource.h"
+
+#define DefaultFont(o) [UIFont fontWithName:@"FZMWJW--GB1-0" size:o]
+
+//游戏速度
+#define GameSpeed   @"GameSpeed"
+
+//游戏最佳成绩
+#define BestScoreKey    @"BestScoreKey"
+
+
+//简书地址
+#define JianShuURL @"http://www.jianshu.com/users/232094594d02/latest_articles"
+//github地址
+#define GithubURL  @""
+
+#endif /* PrefixHeader_pch */

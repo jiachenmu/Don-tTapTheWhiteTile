@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FZMWFont.ttf">
+            <string>FZMWJW--GB1-0</string>
+            <string>FZMWJW--GB1-0</string>
+            <string>FZMWJW--GB1-0</string>
+            <string>FZMWJW--GB1-0</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
+            <connections>
+                <outlet property="SettingView" destination="i5M-Pr-FkT" id="YRS-Oz-IuU"/>
+                <outlet property="adjustSoundEffect" destination="KX5-qY-Pfw" id="4j4-du-vZJ"/>
+                <outlet property="backButton" destination="BAw-E4-vl2" id="YKh-xg-z0P"/>
+                <outlet property="openMyJianshu" destination="IIy-3J-je5" id="UPO-gg-DOP"/>
+                <outlet property="openMygithubBtn" destination="brM-eg-6yP" id="xV1-B5-LCa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="UIButton">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIy-3J-je5">
+                    <rect key="frame" x="200" y="373" width="201" height="41"/>
+                    <fontDescription key="fontDescription" name="FZMWJW--GB1-0" family="FZMiaoWuS-GB" pointSize="25"/>
+                    <state key="normal" title="去我的简书瞅瞅😃">
+                        <color key="titleColor" red="0.28016586225196766" green="0.5841224747474747" blue="0.32797414374452305" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openMyJIanShu:" destination="-1" eventType="touchUpInside" id="ccY-5Y-g3t"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAw-E4-vl2">
+                    <rect key="frame" x="21" y="60" width="109" height="59"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="59" id="5qF-bw-6IX"/>
+                        <constraint firstAttribute="width" constant="109" id="F42-vp-XKq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="FZMWJW--GB1-0" family="FZMiaoWuS-GB" pointSize="25"/>
+                    <state key="normal" title=" ←撤退"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="YJT-J0-RST"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brM-eg-6yP">
+                    <rect key="frame" x="213" y="509" width="175" height="44"/>
+                    <fontDescription key="fontDescription" name="FZMWJW--GB1-0" family="FZMiaoWuS-GB" pointSize="28"/>
+                    <state key="normal" title="➼我的Github➼"/>
+                    <connections>
+                        <action selector="openMygithub:" destination="-1" eventType="touchUpInside" id="BlH-qs-5Lg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KX5-qY-Pfw">
+                    <rect key="frame" x="185" y="129" width="232" height="45"/>
+                    <fontDescription key="fontDescription" name="FZMWJW--GB1-0" family="FZMiaoWuS-GB" pointSize="29"/>
+                    <state key="normal" title="按键：拳击音效👊"/>
+                    <connections>
+                        <action selector="adJustKeySound:" destination="-1" eventType="touchUpInside" id="1eH-7K-I3f"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KX5-qY-Pfw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="129" id="43g-cD-4Bd"/>
+                <constraint firstItem="KX5-qY-Pfw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="0.5" id="CB3-Cn-JKQ"/>
+                <constraint firstItem="BAw-E4-vl2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="Ua6-TD-J1n"/>
+                <constraint firstItem="IIy-3J-je5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="93" id="aPe-Sb-rhG"/>
+                <constraint firstItem="brM-eg-6yP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="0.5" id="jtM-d3-MAT"/>
+                <constraint firstItem="IIy-3J-je5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="0.5" id="nbI-hW-aP8"/>
+                <constraint firstAttribute="bottom" secondItem="brM-eg-6yP" secondAttribute="bottom" constant="47" id="t12-qf-KZ0"/>
+                <constraint firstItem="BAw-E4-vl2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="vVC-kS-PU1"/>
+            </constraints>
+            <point key="canvasLocation" x="248" y="432"/>
+        </view>
+    </objects>
+</document>
