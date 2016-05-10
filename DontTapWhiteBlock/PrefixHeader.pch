@@ -37,6 +37,6 @@
 //简书地址
 #define JianShuURL @"http://www.jianshu.com/users/232094594d02/latest_articles"
 //github地址
-#define GithubURL  @""
+#define GithubURL  @"https://github.com/jiachenmu/Don-tTapTheWhiteTile"
 
 #endif /* PrefixHeader_pch */
