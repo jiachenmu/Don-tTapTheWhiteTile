@@ -1,34 +1,51 @@
-# Don-tTapTheWhiteTile
-iOS-OC项目 别踩白块(Don't Tap The White Tile)
-##写在前面的话
+# iOS-OC项目 别踩白块(Don't Tap The White Tile)
 
-####①别踩白块游戏简介：
+***
+
+## 写在前面的话
+
+#### ①别踩白块游戏简介：
+
 >《别踩白块儿 Don't Tap The White Tile》，这就是这个游戏唯一的一个规则，我们只需要不断踩着黑色方块前进即可，很简单吧？谁都可以会玩，但并不是谁都能玩得很好噢，你呢？快来挑战看看吧！经典模式，以最快的速度到达终点。街机模式，你有能力得多少分就得多少分，没有任何限制，这也是最具挑战性的一个模式。限时模式，在30秒内看你能走几步。极速模式，没有最高速限制的街机模式, 挑战你的极限接力模式，规定时间内完成50块儿，然后会有更多时间去完成另外的50块儿。【复制于百度百科】
 
 如果你没玩过，没关系 ，上图看看
 ![别踩白块儿.gif](http://upload-images.jianshu.io/upload_images/1299512-1c86ccf35a745617.gif?imageMogr2/auto-orient/strip)
 意思就是：每行有四个按钮，黑色的按钮是正确的需要你点击的按钮，白色块点击后游戏失败，所以这个游戏就叫"别踩白块儿"😂，别问我我为什么这么机智。
 
-####②写这个小游戏的目的
-#####**最重要 :  __纯属好玩__**
+#### ②写这个小游戏的目的
+
+##### **最重要 :  __纯属好玩__**
+
 我觉得做一件事情最大的推动力就是 **兴趣** **兴趣** **兴趣**。
 看到好多游戏都是拿Unity3D、Cocos2D开发的，我就想 我用系统自带的一些东海也可以实现一些简单的平面2D动画呀，所以我试了试，所以就有了这篇简书。
-#####**电商之类的app不美观**
+
+##### **电商之类的app不美观**
+
 前面仿写过[半糖app](http://www.jianshu.com/p/7b57eb0c4abe)，公司也是电商的app，所以对于电商app无爱了，,,Ծ‸Ծ,,，都是 首页、分类、购物车、个人中心的套路，你懂的。相反我倒是更喜欢一些电商入口的APP，就比如半糖、美丽说、小红书之类的app，UI很美观，这是吸引我的地方。
 
 ***
-##项目整体的概括
-####①开发周期： 
+
+## 项目整体的概括
+
+#### ①开发周期： 
+
 工作闲暇之余累计有10天左右，最近一个半月在忙公司的项目，只好抽时间写啦
-####②开发工具和语言：
+
+#### ②开发工具和语言：
+
  开发工具为Xcode7.3   语言为Objective-C
 因为前面仿写半糖app的时候，好多朋友给我说不太懂swift，那我就写个OC的小项目
-####③开发要点： 
+
+#### ③开发要点： 
+
 **游戏成功、失败的逻辑代码基于 `ReactiveCocoa` ,代码有详细的解释。**
 音频管理、整体的UI搭建不难，难的是整体游戏逻辑的设计。
+
 ***
-##项目详细实现过程
-####①首页，页面较为简单，主要介绍一下 UIButton与 `ReactiveCocoa`的结合使用
+
+## 项目详细实现过程
+
+#### ①首页，页面较为简单，主要介绍一下 UIButton与 `ReactiveCocoa`的结合使用
 
 ![tmp58f5a0f6.png](http://upload-images.jianshu.io/upload_images/1299512-81e0e7253713d485.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -53,8 +70,8 @@ iOS-OC项目 别踩白块(Don't Tap The White Tile)
 
 解释：`[_startButton rac_signalForControlEvents:UIControlEventTouchUpInside] `返回一个 `RACSignal`,可以理解为 一个信号，后面 `subscribeNext:^(id x) {}` 意思就是 接受到这个信号所做的操作。从字面意思上可以理解为，前者当你点击按钮，触发`UIControlEventTouchUpInside`事件的时候 ，发出一个信号，后者是接受到这个信号，你要干什么，由你决定。
 
-####②游戏页面view，
- #####倒计时动画介绍
+#### ②游戏页面view，
+ ##### 倒计时动画介绍
 上图：
 
 ![倒计时动画.gif](http://upload-images.jianshu.io/upload_images/1299512-76ac222f93784caa.gif?imageMogr2/auto-orient/strip)
@@ -123,7 +140,7 @@ iOS-OC项目 别踩白块(Don't Tap The White Tile)
     }
 }
 ```
- #####游戏界面如何搭建
+ ##### 游戏界面如何搭建
 ①首页整体界面搭建
 ![B7A2A5EB-B936-4ABD-BF2A-F6135389EC0C.png](http://upload-images.jianshu.io/upload_images/1299512-23020b7609d725bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 界面中每一个被我框起来的都是我封装的 `GameSceneView`,当然我们不能在每一个`GameSceneView`那如何实现''重用'呢'
@@ -347,3 +364,5 @@ if (type == CompleteTypeVictory) {
 [点击去我的简书](http://www.jianshu.com/p/fd4c46c31508)
 
 **工作事宜及问题交流请联系QQ: 1691919529**
+
+
